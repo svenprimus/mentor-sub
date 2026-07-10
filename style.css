@@ -1,0 +1,108 @@
+html {
+    background-color: var(--color-bg-main);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100svh;
+}
+
+.header-main,
+main,
+footer > div {
+    padding-inline: clamp(29.5px, calc((100vw - 400px) * 105.5 / 840 + 29.5px), 135px);
+}
+
+.header-main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 128px;
+
+    nav {
+        display: flex;
+    }
+
+    img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .header-circle {
+        /* TODO: make this for header to -33dw */
+        background-color: var(--color-bg-shell);
+
+        z-index: -1;
+        position: absolute;
+        bottom: 0;
+        transform: translateX(-33svw);
+
+        width: clamp(2000px, calc((100dvw - 400px) * 26000 / 1000 + 500dvw), 28000px);
+        height: clamp(2000px, calc((100dvw - 400px) * 26000 / 1000 + 500dvw), 28000px);
+
+        border-radius: 100%;
+    }
+}
+main {
+    flex-grow: 1;
+    background-color: var(--color-bg-main);
+
+    #page-top {
+        display: flex;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+}
+
+footer {
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        height: 100px;
+        padding-block: 15px;
+
+        .footer-circle {
+            /* TODO: make this for header to -33dw */
+            background-color: var(--color-bg-shell);
+
+            z-index: -1;
+            position: absolute;
+            top: 0;
+            transform: translateX(33svw);
+
+            width: clamp(2000px, calc((100dvw - 400px) * 26000 / 1000 + 500dvw), 28000px);
+            height: clamp(2000px, calc((100dvw - 400px) * 26000 / 1000 + 500dvw), 28000px);
+
+            border-radius: 100%;
+        }
+    }
+
+    a {
+        display: flex;
+
+        img {
+            width: 48px;
+            height: 48px;
+            border-radius: 100%;
+        }
+    }
+}
+
+@media screen and (min-width: 1441px) {
+    .header-main {
+        padding-inline: max(calc(50% - 720px), 135px);
+    }
+    main {
+        padding-inline: max(calc(50% - (720px - 135px)), 135px);
+    }
+}
