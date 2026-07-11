@@ -8,32 +8,66 @@ body {
     min-height: 100svh;
 }
 
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000000;
+    border: none;
+    text-decoration: none;
+    color: var(--color-font-default);
+}
+
+p {
+    color: var(--color-font-default);
+}
+
 .header-main,
 main,
-footer > div {
-    padding-inline: clamp(29.5px, calc((100vw - 400px) * 105.5 / 840 + 29.5px), 135px);
+footer {
+    padding-inline: clamp(16px, calc((100vw - 400px) * 119 / 840 + 16px), 135px);
 }
 
 .header-main {
+    height: 100px;
+
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
     overflow: hidden;
-    height: 128px;
 
     nav {
+        width: 100%;
         display: flex;
-    }
+        justify-content: flex-start;
+        gap: 32px;
 
-    img {
-        width: 48px;
-        height: 48px;
+        a > div {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            span {
+                color: green;
+            }
+
+            img {
+                width: 48px;
+                height: 48px;
+            }
+
+            .infiction {
+                position: absolute;
+                bottom: -15px;
+                left: 12px;
+            }
+        }
     }
 
     .header-circle {
-        /* TODO: make this for header to -33dw */
         background-color: var(--color-bg-shell);
 
         z-index: -1;
@@ -46,63 +80,94 @@ footer > div {
 
         border-radius: 100%;
     }
+
+    ul {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        justify-content: space-between;
+        gap: 16px;
+
+        button:hover > span {
+            color: var(--color-accent);
+        }
+    }
 }
+
 main {
     flex-grow: 1;
     background-color: var(--color-bg-main);
-
-    #page-top {
-        display: flex;
-    }
-
-    ul {
-        list-style-type: none;
-    }
 }
 
 footer {
-    div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+
+    > div {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        overflow: hidden;
-        height: 100px;
+        align-items: flex-end;
+        justify-content: flex-end;
+
+        height: 80px;
+        width: 100%;
         padding-block: 15px;
+        gap: 32px;
 
-        .footer-circle {
-            /* TODO: make this for header to -33dw */
-            background-color: var(--color-bg-shell);
+        a {
+            display: flex;
+            align-items: flex-end;
+            gap: 16px;
 
-            z-index: -1;
-            position: absolute;
-            top: 0;
-            transform: translateX(33svw);
+            img {
+                width: 48px;
+                height: 48px;
+                border-radius: 100%;
+            }
+        }
 
-            width: clamp(2000px, calc((100dvw - 400px) * 26000 / 1000 + 500dvw), 28000px);
-            height: clamp(2000px, calc((100dvw - 400px) * 26000 / 1000 + 500dvw), 28000px);
+        a:hover > img {
+            box-shadow: 0 0 20px 0 var(--color-accent);
+        }
 
-            border-radius: 100%;
+        p {
+            text-align: right;
         }
     }
 
-    a {
-        display: flex;
+    .footer-circle {
+        align-self: center;
+        background-color: var(--color-bg-shell);
 
-        img {
-            width: 48px;
-            height: 48px;
-            border-radius: 100%;
-        }
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        transform: translateX(33svw);
+
+        width: clamp(2000px, calc((100dvw - 400px) * 26000 / 1000 + 500dvw), 28000px);
+        height: clamp(2000px, calc((100dvw - 400px) * 26000 / 1000 + 500dvw), 28000px);
+
+        border-radius: 100%;
     }
 }
 
 @media screen and (min-width: 1441px) {
-    .header-main {
+    .header-main,
+    footer {
         padding-inline: max(calc(50% - 720px), 135px);
     }
     main {
         padding-inline: max(calc(50% - (720px - 135px)), 135px);
+    }
+}
+
+@media screen and (max-width: 319px) {
+    .header-main {
+        nav {
+            gap: clamp(5px, (100dvw - 275px) * 28 / 43 + 5px,32px);
+        }
     }
 }

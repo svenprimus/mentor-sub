@@ -1,4 +1,6 @@
 :root {
     --color-bg-shell: #09212a;
-    --color-bg-main: #06171F;
+    --color-bg-main: #0e3243;
+    --color-accent: #17A24C;
+    --color-font-default: whitesmoke;
 }
