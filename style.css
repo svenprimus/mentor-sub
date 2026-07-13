@@ -1,5 +1,6 @@
 html {
     background-color: var(--color-bg-main);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -202,11 +203,16 @@ main {
 }
 
 .button-favorite {
-    img {
-        object-fit: contain;
-        width: var(--size-button-favorite);
-        height: var(--size-button-favorite);
-    }
+    background-image: url('./asset/icon/icon-favorite-default.svg');
+    width: var(--size-button-favorite);
+    height: var(--size-button-favorite);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+.button-favorite:hover {
+    background-image: url('./asset/icon/icon-favorite-active.svg');
 }
 
 .section-pricing {
@@ -221,7 +227,7 @@ main {
     margin-bottom: var(--gap-sections);
 
     > p {
-        color: var(--color-red); 
+        color: var(--color-red);
         font-weight: bold;
     }
 }
@@ -311,7 +317,8 @@ main {
             border: 0;
             border-radius: 4px;
             color: var(--color-font-default);
-            padding-left: 4px
+            padding-left: 4px;
+            /* caret-color: red; */
         }
 
         input:focus {
@@ -319,9 +326,17 @@ main {
             border-bottom: 2px solid var(--color-accent);
         }
 
-        img {
+        .button-send {
             width: 18px;
             height: 18px;
+            background-image: url('./asset/icon/icon-send-default.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: 50%;
+        }
+
+        .button-send:hover {
+            background-image: url('./asset/icon/icon-send-active.svg');
         }
     }
 }

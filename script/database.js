@@ -1,7 +1,7 @@
 let mentors = [
     {
         name: 'Ragniko Lodbrok',
-        saga: 'The Saga of the Sixteen Caps',
+        saga: 'Saga of the Sixteen Caps',
         blurb: 'Long before the skalds carved his name into oak and stone, there walked a warrior unlike any other. Ragniko Lodbrok feared neither storm nor steel, and where others sought crowns of gold, he gathered caps beyond counting.<br>It is said that he owned sixteen. Sixteen caps, each won under a different sky, each bearing the weight of a tale no living soul could fully recall. Some whisper they were gifts from forgotten kings. Others claim they were taken from champions who dared challenge him. A few insist they were woven by the Norns themselves, each thread binding fate to the man who wore it.<br>Yet no two stories agree.<br>The truth has faded into mist, hidden beneath centuries of legend and laughter around crackling fires. Only this remains certain: wherever Ragniko placed a cap upon his head, fortune—or chaos—was sure to follow.<br>So fill your horn, draw nearer to the flame, and listen well.<br>For this is not merely the tale of a Viking.<br>It is the saga of the sixteen caps... and the mystery they were never meant to reveal.',
         likes: 1250,
         liked: true,

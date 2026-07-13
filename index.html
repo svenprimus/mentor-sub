@@ -24,11 +24,12 @@
                         <img class="infiction" src="./asset/icon/icon-in-fiction.svg" alt="stamp to logo " /></div
                 ></a>
                 <ul>
+                    <!-- TODO filter option -->
                     <li>
-                        <button><span>M</span>entors</button>
+                        <button aria-description="Show all mentors"><span>M</span>entors</button>
                     </li>
                     <li>
-                        <button><span>F</span>avorites</button>
+                        <button aria-description="Show only favorite mentors"><span>F</span>avorites</button>
                     </li>
                 </ul>
             </nav>
@@ -36,7 +37,6 @@
         </header>
 
         <main>
-            <!-- TODO aria -->
             <article class="profile-card">
                 <div class="profile-card-content">
                     <h2>Ragniko Lodbrok</h2>
@@ -44,6 +44,9 @@
                 <hr />
                 <div class="profile-card-content">
                     <img
+                        aria-haspopup="dialog"
+                        aria-controls="pictureDialog"
+                        onclick="openDialog(${index})"
                         class="profile-picture"
                         src="./asset/img/profile-ragniko.jpg"
                         alt="viking with a cap"
@@ -56,18 +59,14 @@
                         <p>19.99 €</p>
                         <div>
                             <p>1250</p>
-                            <button class="button-favorite">
-                                <img src="./asset/icon/icon-favorite-default.svg" alt="favorite status" />
-                            </button>
+                            <button class="button-favorite" aria-description="add mentor to favorites"></button>
                         </div>
                     </section>
                     <section class="section-details">
                         <table>
                             <tr>
                                 <th>Saga</th>
-                                <td>
-                                    : <span title="The Saga of the Sixteen Caps">The Saga of the Sixteen Caps</span>
-                                </td>
+                                <td>: <span title="Saga of the Sixteen Caps">Saga of the Sixteen Caps</span></td>
                             </tr>
                             <tr>
                                 <th>Published</th>
@@ -82,7 +81,7 @@
                 </section>
                 <hr />
                 <section class="section-blurb profile-card-content">
-                    <p tabindex="0">
+                    <p aria-haspopup="dialog" aria-controls="pictureDialog" onclick="openDialog(${index})" tabindex="0">
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed vel voluptatibus molestias ad nam.
                         Nulla, itaque optio voluptas aliquam adipisci libero totam harum cum soluta illum? Cum,
                         obcaecati in enim at reiciendis asperiores inventore molestiae temporibus animi magni. Unde ea
@@ -121,10 +120,11 @@
                     </div>
                     <div class="section-comments-input">
                         <input type="text" name="new-comment" />
-                        <button><img src="./asset/icon/icon-send-default.svg" alt="send comment" /></button>
+                        <button class="button-send" aria-description="send comment"></button>
                     </div>
                 </section>
             </article>
+            <dialog id="pictureDialog" onclick="closeDialog()" aria-labelledby="dialogTitle"></dialog>
         </main>
 
         <footer>
