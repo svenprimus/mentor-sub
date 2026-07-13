@@ -1,6 +1,18 @@
 :root {
-    --color-bg-shell: #09212a;
-    --color-bg-main: #0e3243;
-    --color-accent: #17A24C;
+    --color-bg-shell: #0e3243;
+    --color-bg-main: #09212a;
+    --color-bg-card: #154B65;
+    --color-accent-logo: #17A24C;
+    --color-accent: #81BBD1;
+    --color-accent-weak: #81bad180;
+    --color-accent-strong: rgb(73, 141, 168);
     --color-font-default: whitesmoke;
+    --color-red: #FF5C51;
+
+    --size-button-favorite: 28px;
+    --padding-block-content: 40px;
+    --gap-sections: 8px;
+
+    --width-profile-card: 300px;
+    --height-profile-card: 550px;
 }
