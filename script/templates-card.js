@@ -11,7 +11,7 @@ function getProfile(index) {
 }
 
 function getProfileContent(index) {
-    return /*html*/`
+    return /*html*/ `
         ${getSectionPicture(index)}
         <hr />
         ${getSectionPricingDetails(index)}
@@ -55,7 +55,7 @@ function getPricingAndLikes(index) {
         <p>${mentors[index].price} €</p>
         <div>
             <p>${mentors[index].likes}</p>
-            <button id="button-favorite-${index}" class="button-favorite"
+            <button id="button-favorite-${index}" class="button-favorite" onclick="setLiked(${index})"
                 aria-description="add mentor to favorites">
             </button>
         </div>
@@ -99,8 +99,8 @@ function getSectionComments(index) {
                 <table id="comments-table-${index}"></table>
             </div>
             <div class="section-comments-input">
-                <input type="text" name="new-comment" />
-                <button class="button-send" aria-description="send comment"></button>
+                <input id="comments-input-${index}" type="text" name="new-comment" />
+                <button class="button-send" onclick="setComment(${index})" aria-description="send comment"></button>
             </div>
         </section>
     `;

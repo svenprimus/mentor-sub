@@ -3,6 +3,7 @@ const contentMainRef = document.getElementById('content-main');
 function renderProfiles(onlyLiked) {
     renderProfileCards(onlyLiked);
     renderProfileAssets(onlyLiked);
+    contentMainRef.innerHTML += addDialog();
 }
 
 function renderProfileCards(onlyLiked) {
@@ -37,4 +38,12 @@ function renderComments(indexMentor) {
     for (let indexComment = 0; indexComment < mentors[indexMentor].comments.length; indexComment++) {
         commentTableRef.innerHTML += getCommentRow(indexMentor, indexComment);
     }
+}
+
+function setLiked(index) {
+    // TODO
+}
+
+function setComment(index) {
+    // TODO
 }
