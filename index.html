@@ -36,51 +36,91 @@
         </header>
 
         <main>
-            <article>
-                <h2>Ragniko Lodbrok</h2>
+            <article class="profile-card">
+                <div class="profile-card-content">
+                    <h2>Ragniko Lodbrok</h2>
+                </div>
                 <hr />
-                <img src="./asset/img/profile-ragniko.jpg" alt="viking with a cap" />
+                <div class="profile-card-content">
+                    <img
+                        class="profile-picture"
+                        src="./asset/img/profile-ragniko.jpg"
+                        alt="viking with a cap"
+                        tabindex="0"
+                    />
+                </div>
                 <hr />
-                <section>
-                    <p>19.99 €</p>
-                    <div>
-                        <p>1250</p>
-                        <button><img src="./asset/icon/icon-favorite-default.svg" alt="favorite status" /></button>
-                    </div>
+                <section class="profile-card-content">
+                    <section class="section-pricing">
+                        <p>19.99 €</p>
+                        <div>
+                            <p>1250</p>
+                            <button class="button-favorite">
+                                <img src="./asset/icon/icon-favorite-default.svg" alt="favorite status" />
+                            </button>
+                        </div>
+                    </section>
+                    <section class="section-details">
+                        <table>
+                            <tr>
+                                <th>Saga</th>
+                                <td>
+                                    : <span title="The Saga of the Sixteen Caps">The Saga of the Sixteen Caps</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Published</th>
+                                <td>: 802</td>
+                            </tr>
+                            <tr>
+                                <th>Genre</th>
+                                <td>: Fantasy</td>
+                            </tr>
+                        </table>
+                    </section>
                 </section>
                 <hr />
-                <section>
-                    <table>
-                        <tr>
-                            <th>Saga</th>
-                            <td>The Saga of the Sixteen Caps</td>
-                        </tr>
-                        <tr>
-                            <th>Published</th>
-                            <td>802</td>
-                        </tr>
-                        <tr>
-                            <th>Genre</th>
-                            <td>Fantasy</td>
-                        </tr>
-                    </table>
+                <section class="section-blurb profile-card-content">
+                    <p tabindex="0">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed vel voluptatibus molestias ad nam.
+                        Nulla, itaque optio voluptas aliquam adipisci libero totam harum cum soluta illum? Cum,
+                        obcaecati in enim at reiciendis asperiores inventore molestiae temporibus animi magni. Unde ea
+                        magni exercitationem ipsa atque reprehenderit cum in temporibus nam corporis delectus explicabo
+                        veritatis amet sapiente quas quod voluptate nihil cupiditate repellat, ipsum placeat expedita
+                        quos odit ullam? Cupiditate delectus accusamus non, in porro sit provident repudiandae quibusdam
+                        ex magnam. Perspiciatis accusamus numquam vitae doloribus quod quae dolores? Mollitia, maiores
+                        ea amet laboriosam explicabo nihil tempore officia rem ipsum voluptates enim accusamus sint
+                        officiis itaque reprehenderit? Velit dolor, odit eligendi iusto modi quidem ipsum amet illum
+                        commodi unde! Culpa quidem quaerat quisquam saepe, officiis aliquid dignissimos iusto alias
+                        optio aliquam ducimus corrupti molestias numquam sit impedit temporibus. Nulla exercitationem
+                        maiores consequuntur, doloremque laborum esse consectetur aut magnam facere voluptates
+                        distinctio laboriosam? Similique error consequuntur et inventore exercitationem, voluptate ut
+                        quam dignissimos eum, repudiandae voluptates. Non nihil perferendis voluptates dolor alias
+                        laboriosam iste totam optio id quisquam dignissimos fuga exercitationem ratione ex, nostrum
+                        cumque corrupti voluptatum quam porro hic officiis perspiciatis? Sint eveniet blanditiis
+                        incidunt fugiat eum accusamus? Commodi, asperiores. Distinctio, natus.
+                    </p>
                 </section>
                 <hr />
-                <section>
+                <section class="section-comments profile-card-content">
                     <h3>Comments</h3>
-                    <table>
-                        <tr>
-                            <td>Reader123</td>
-                            <td>A true Jarl needs no crown... only the right cap. Skal!</td>
-                        </tr>
-                        <tr>
-                            <td>Bookworm84</td>
-                            <td>Sixteen caps? Odin only gave up one eye. Ragniko clearly made the better deal.</td>
-                        </tr>
-                    </table>
-                    <div>
+                    <div class="section-comments-table">
+                        <table>
+                            <tr>
+                                <th>Reader123</th>
+                                <td>: A true Jarl needs no crown... only the right cap. Skal!</td>
+                            </tr>
+                            <tr>
+                                <th>Bookworm84</th>
+                                <td>
+                                    : Sixteen caps? Odin only gave up one eye. Ragniko clearly made the better deal.
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="section-comments-input">
                         <input type="text" name="new-comment" />
-                        <button>Send</button>
+                        <button><img src="./asset/icon/icon-send-default.svg" alt="send comment" /></button>
                     </div>
                 </section>
             </article>

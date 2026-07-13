@@ -28,6 +28,7 @@ footer {
     padding-inline: clamp(16px, calc((100vw - 400px) * 119 / 840 + 16px), 135px);
 }
 
+/* #region shell */
 .header-main {
     height: 100px;
 
@@ -89,12 +90,13 @@ footer {
         gap: 16px;
 
         button:hover > span {
-            color: var(--color-accent);
+            color: var(--color-accent-logo);
         }
     }
 }
 
 main {
+    padding-block: var(--padding-block-content);
     flex-grow: 1;
     background-color: var(--color-bg-main);
 }
@@ -130,7 +132,7 @@ footer {
         }
 
         a:hover > img {
-            box-shadow: 0 0 20px 0 var(--color-accent);
+            box-shadow: 0 0 20px 0 var(--color-accent-logo);
         }
 
         p {
@@ -153,7 +155,174 @@ footer {
         border-radius: 100%;
     }
 }
+/* #endregion shell */
+/* #region profile-card */
+.profile-card {
+    width: var(--width-profile-card);
+    /* height: var(--height-profile-card); */
 
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--color-bg-card);
+    border-radius: 16px;
+    color: var(--color-font-default);
+
+    text-align: left;
+
+    h2 {
+        text-align: center;
+    }
+}
+
+.profile-card-content {
+    padding: var(--gap-sections);
+}
+
+.profile-picture {
+    object-fit: cover;
+    object-position: 50% 20%;
+
+    width: 100%;
+    height: calc(var(--height-profile-card) * 0.2);
+    border-radius: 8px;
+    transform-origin: 50% 50%;
+    box-shadow: 4px 8px 4px 0px rgba(0, 0, 0, 0.205);
+
+    /* TODO open dialog (same as with blurb) */
+    cursor: pointer;
+}
+
+.button-favorite {
+    img {
+        object-fit: contain;
+        width: var(--size-button-favorite);
+        height: var(--size-button-favorite);
+    }
+}
+
+.section-pricing {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    div {
+        display: flex;
+        align-items: center;
+        gap: var(--gap-sections);
+    }
+    margin-bottom: var(--gap-sections);
+
+    > p {
+        color: var(--color-red); 
+        font-weight: bold;
+    }
+}
+
+.section-details {
+    display: flex;
+    justify-content: flex-start;
+    table {
+        width: 100%;
+
+        tr {
+            vertical-align: top;
+            td {
+                display: -webkit-box;
+                line-clamp: 1;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+        }
+    }
+}
+
+.section-blurb {
+    p {
+        /* TODO: open dialog? */
+        cursor: pointer;
+        width: 100%;
+        overflow: hidden;
+
+        display: -webkit-box;
+        line-clamp: 3;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+}
+
+.section-comments {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-sections);
+
+    .section-comments-table {
+        height: calc(var(--height-profile-card) * 0.2);
+        overflow-y: auto;
+
+        table {
+            border-collapse: collapse;
+            tr {
+                vertical-align: top;
+
+                th {
+                    font-weight: normal;
+                }
+                td {
+                    word-break: break-word;
+                }
+            }
+        }
+    }
+
+    .section-comments-table::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .section-comments-table::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px var(--color-bg-main);
+        border-radius: 10px;
+    }
+
+    .section-comments-table::-webkit-scrollbar-thumb {
+        background: var(--color-accent);
+        border-radius: 10px;
+    }
+
+    .section-comments-table::-webkit-scrollbar-thumb:hover {
+        background: var(--color-accent-strong);
+    }
+
+    .section-comments-input {
+        display: flex;
+        gap: 16px;
+
+        input {
+            flex-grow: 1;
+            background-color: var(--color-accent-weak);
+            border: 0;
+            border-radius: 4px;
+            color: var(--color-font-default);
+            padding-left: 4px
+        }
+
+        input:focus {
+            outline: none;
+            border-bottom: 2px solid var(--color-accent);
+        }
+
+        img {
+            width: 18px;
+            height: 18px;
+        }
+    }
+}
+
+hr {
+    border: 1px solid var(--color-accent);
+}
+
+/* #region profile-card */
 @media screen and (min-width: 1441px) {
     .header-main,
     footer {
@@ -167,7 +336,7 @@ footer {
 @media screen and (max-width: 319px) {
     .header-main {
         nav {
-            gap: clamp(5px, (100dvw - 275px) * 28 / 43 + 5px,32px);
+            gap: clamp(5px, (100dvw - 275px) * 28 / 43 + 5px, 32px);
         }
     }
 }
