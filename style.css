@@ -25,7 +25,7 @@ p {
 .header-main,
 main,
 footer {
-    padding-inline: clamp(16px, calc((100vw - 400px) * 119 / 840 + 16px), 135px);
+    padding-inline: clamp(16px, calc((100vw - 400px) * 64 / 840 + 16px), 80px);
 }
 
 /* #region shell */
@@ -95,12 +95,6 @@ footer {
     }
 }
 
-main {
-    padding-block: var(--padding-block-content);
-    flex-grow: 1;
-    background-color: var(--color-bg-main);
-}
-
 footer {
     position: relative;
     display: flex;
@@ -156,13 +150,27 @@ footer {
     }
 }
 /* #endregion shell */
+
+main {
+    padding-block: var(--padding-block-content);
+    flex-grow: 1;
+    background-color: var(--color-bg-main);
+
+    display: flex;
+    flex-wrap: wrap;
+    /* align-items: flex-start; */
+    align-content: flex-start;
+    gap: 20px;
+}
+
 /* #region profile-card */
 .profile-card {
     width: var(--width-profile-card);
-    /* height: var(--height-profile-card); */
+    height: var(--height-profile-card);
 
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 
     background-color: var(--color-bg-card);
     border-radius: 16px;
@@ -326,10 +334,10 @@ hr {
 @media screen and (min-width: 1441px) {
     .header-main,
     footer {
-        padding-inline: max(calc(50% - 720px), 135px);
+        padding-inline: max(calc(50% - 720px), 80px);
     }
     main {
-        padding-inline: max(calc(50% - (720px - 135px)), 135px);
+        padding-inline: max(calc(50% - (720px - 80px)), 80px);
     }
 }
 
