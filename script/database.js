@@ -8,6 +8,8 @@ let mentors = [
         price: 999.99,
         publishedYear: 802,
         genre: 'Fantasy',
+        image: './asset/img/profile-ragniko.jpg',
+        alt: 'viking with a cap',
         comments: [
             {
                 name: 'Reader123',
@@ -35,16 +37,18 @@ let mentors = [
     {
         name: 'Jiulianimo Maximus',
         saga: 'The Pizza Empire',
-        blurb: 'In the golden age of Rome, when legions marched beneath crimson banners and emperors sought dominion over every horizon, there arose one ruler unlike all who came before.<br><strong>His name was Jiulianimo Maximus.<strong><br>Though crowned with laurel and clothed in imperial glory, his heart belonged not to war alone, but to the sacred art of pizza. It was his unwavering belief that no province could call itself civilized until its people had tasted the perfect slice.<br>Yet the world had grown too vast for roads and legions alone.<br>So the Emperor laid aside his sword and embraced a new conquest—the boundless realm of the Web. Where others forged shields, he forged code. Where generals built fortresses, he built websites. Every page became a new province, every line of code another stone in his digital empire, carrying his beloved pizza to lands no Roman had ever dreamed to reach.<br>The campaigns have long since ended, but his greatest legacy endures.<br>Now, Jiulianimo Maximus stands not upon the battlefield, but before eager disciples, passing on the ancient wisdom of pixels, markup, and cascading styles. His students do not inherit an empire of marble, but one of knowledge—built with patience, creativity, and the enduring Roman conviction that all great things deserve a strong foundation.<br><strong>Ave Jiulianimo Maximus!</strong><br>May his code compile, his pizza remain ever warm, and his students forever honor the Empire.',
+        blurb: 'In the golden age of Rome, when legions marched beneath crimson banners and emperors sought dominion over every horizon, there arose one ruler unlike all who came before.<br><strong>His name was Jiulianimo Maximus.</strong><br>Though crowned with laurel and clothed in imperial glory, his heart belonged not to war alone, but to the sacred art of pizza. It was his unwavering belief that no province could call itself civilized until its people had tasted the perfect slice.<br>Yet the world had grown too vast for roads and legions alone.<br>So the Emperor laid aside his sword and embraced a new conquest—the boundless realm of the Web. Where others forged shields, he forged code. Where generals built fortresses, he built websites. Every page became a new province, every line of code another stone in his digital empire, carrying his beloved pizza to lands no Roman had ever dreamed to reach.<br>The campaigns have long since ended, but his greatest legacy endures.<br>Now, Jiulianimo Maximus stands not upon the battlefield, but before eager disciples, passing on the ancient wisdom of pixels, markup, and cascading styles. His students do not inherit an empire of marble, but one of knowledge—built with patience, creativity, and the enduring Roman conviction that all great things deserve a strong foundation.<br><strong>Ave Jiulianimo Maximus!</strong><br>May his code compile, his pizza remain ever warm, and his students forever honor the Empire.',
         likes: 980,
         liked: true,
         price: 14.5,
         publishedYear: -100,
         genre: 'Fantasy',
+        image: './asset/img/profile-jiulianimo.jpg',
+        alt: 'Roman emperor eating pizza',
         comments: [
             {
                 name: 'JuliusTheREAL',
-                comment: "All roads lead to Rome... but somehow they all stop for Jiulianimo's pizza first.",
+                comment: 'All roads lead to Rome... but somehow they all stop for Jiulianimo\'s pizza first.',
             },
             {
                 name: 'TheItalianGuy',
@@ -53,7 +57,7 @@ let mentors = [
             {
                 name: 'Troll123',
                 comment:
-                    "Rumor has it the Colosseum wasn't built for gladiators—it was built to hold the queue for his legendary pizza.",
+                    'Rumor has it the Colosseum wasn\'t built for gladiators—it was built to hold the queue for his legendary pizza.',
             },
         ],
     },
@@ -66,6 +70,8 @@ let mentors = [
         price: 22.95,
         publishedYear: 2022,
         genre: 'Thriller',
+        image: './asset/img/profile-bearlord.jpg',
+        alt: 'Heavy metal fan destroying a guitar',
         comments: [
             {
                 name: 'metalFork99',
@@ -92,6 +98,8 @@ let mentors = [
         price: 2.99,
         publishedYear: 2005,
         genre: 'Drama',
+        image: './asset/img/profile-bananavin.jpg',
+        alt: 'A CEO having King Kong imprisoned',
         comments: [
             {
                 name: 'KingK0ng',
@@ -113,6 +121,8 @@ let mentors = [
         price: 9550,
         publishedYear: 2012,
         genre: 'Drama',
+        image: './asset/img/profile-seo.jpg',
+        alt: 'K-Pop idol showing a heart with his fingers',
         comments: [],
     },
     {
@@ -124,6 +134,8 @@ let mentors = [
         price: 12.3,
         publishedYear: 2022,
         genre: 'Thriller',
+        image: './asset/img/profile-manufest.jpg',
+        alt: 'Two-faced person split in manager and mindcoach',
         comments: [
             {
                 name: 'SteveJobber',
@@ -145,6 +157,8 @@ let mentors = [
         price: 15.9,
         publishedYear: 2023,
         genre: 'Fantasy',
+        image: './asset/img/profile-pixelinus.jpg',
+        alt: 'Blacksmith forging something',
         comments: [
             {
                 name: 'CodeKnight92',
@@ -165,6 +179,8 @@ let mentors = [
         price: 10.5,
         publishedYear: 2021,
         genre: 'Thriller',
+        image: './asset/img/profile-captain.jpg',
+        alt: 'Pirate Captain with a sword',
         comments: [
             {
                 name: 'LoopExplorer',
@@ -185,6 +201,8 @@ let mentors = [
         price: 18.4,
         publishedYear: 2024,
         genre: 'Drama',
+        image: './asset/img/profile-lady-refactoria.jpg',
+        alt: 'Lady cleaning with hightec mop',
         comments: [
             {
                 name: 'StackWizard',

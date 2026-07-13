@@ -12,9 +12,11 @@
         <link rel="stylesheet" href="./style.css" />
 
         <script src="./script/database.js"></script>
+        <script src="./script/templates-card.js"></script>
+        <script src="./script/templates-dialog.js"></script>
         <script src="./script.js" defer></script>
     </head>
-    <body>
+    <body onload="renderProfiles(false)">
         <header class="header-main">
             <nav>
                 <a href="#page-top" aria-label="go to top of page">
@@ -24,106 +26,18 @@
                         <img class="infiction" src="./asset/icon/icon-in-fiction.svg" alt="stamp to logo " /></div
                 ></a>
                 <ul>
-                    <!-- TODO filter option -->
                     <li>
-                        <button aria-description="Show all mentors"><span>M</span>entors</button>
+                        <button onclick="renderProfiles(false)" aria-description="Show all mentors"><span>M</span>entors</button>
                     </li>
                     <li>
-                        <button aria-description="Show only favorite mentors"><span>F</span>avorites</button>
+                        <button onclick="renderProfiles(true)" aria-description="Show only favorite mentors"><span>F</span>avorites</button>
                     </li>
                 </ul>
             </nav>
             <div class="header-circle"></div>
         </header>
 
-        <main>
-            <article class="profile-card">
-                <div class="profile-card-content">
-                    <h2>Ragniko Lodbrok</h2>
-                </div>
-                <hr />
-                <div class="profile-card-content">
-                    <img
-                        aria-haspopup="dialog"
-                        aria-controls="pictureDialog"
-                        onclick="openDialog(${index})"
-                        class="profile-picture"
-                        src="./asset/img/profile-ragniko.jpg"
-                        alt="viking with a cap"
-                        tabindex="0"
-                    />
-                </div>
-                <hr />
-                <section class="profile-card-content">
-                    <section class="section-pricing">
-                        <p>19.99 €</p>
-                        <div>
-                            <p>1250</p>
-                            <button class="button-favorite" aria-description="add mentor to favorites"></button>
-                        </div>
-                    </section>
-                    <section class="section-details">
-                        <table>
-                            <tr>
-                                <th>Saga</th>
-                                <td>: <span title="Saga of the Sixteen Caps">Saga of the Sixteen Caps</span></td>
-                            </tr>
-                            <tr>
-                                <th>Published</th>
-                                <td>: 802</td>
-                            </tr>
-                            <tr>
-                                <th>Genre</th>
-                                <td>: Fantasy</td>
-                            </tr>
-                        </table>
-                    </section>
-                </section>
-                <hr />
-                <section class="section-blurb profile-card-content">
-                    <p aria-haspopup="dialog" aria-controls="pictureDialog" onclick="openDialog(${index})" tabindex="0">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed vel voluptatibus molestias ad nam.
-                        Nulla, itaque optio voluptas aliquam adipisci libero totam harum cum soluta illum? Cum,
-                        obcaecati in enim at reiciendis asperiores inventore molestiae temporibus animi magni. Unde ea
-                        magni exercitationem ipsa atque reprehenderit cum in temporibus nam corporis delectus explicabo
-                        veritatis amet sapiente quas quod voluptate nihil cupiditate repellat, ipsum placeat expedita
-                        quos odit ullam? Cupiditate delectus accusamus non, in porro sit provident repudiandae quibusdam
-                        ex magnam. Perspiciatis accusamus numquam vitae doloribus quod quae dolores? Mollitia, maiores
-                        ea amet laboriosam explicabo nihil tempore officia rem ipsum voluptates enim accusamus sint
-                        officiis itaque reprehenderit? Velit dolor, odit eligendi iusto modi quidem ipsum amet illum
-                        commodi unde! Culpa quidem quaerat quisquam saepe, officiis aliquid dignissimos iusto alias
-                        optio aliquam ducimus corrupti molestias numquam sit impedit temporibus. Nulla exercitationem
-                        maiores consequuntur, doloremque laborum esse consectetur aut magnam facere voluptates
-                        distinctio laboriosam? Similique error consequuntur et inventore exercitationem, voluptate ut
-                        quam dignissimos eum, repudiandae voluptates. Non nihil perferendis voluptates dolor alias
-                        laboriosam iste totam optio id quisquam dignissimos fuga exercitationem ratione ex, nostrum
-                        cumque corrupti voluptatum quam porro hic officiis perspiciatis? Sint eveniet blanditiis
-                        incidunt fugiat eum accusamus? Commodi, asperiores. Distinctio, natus.
-                    </p>
-                </section>
-                <hr />
-                <section class="section-comments profile-card-content">
-                    <h3>Comments</h3>
-                    <div class="section-comments-table">
-                        <table>
-                            <tr>
-                                <th>Reader123</th>
-                                <td>: A true Jarl needs no crown... only the right cap. Skal!</td>
-                            </tr>
-                            <tr>
-                                <th>Bookworm84</th>
-                                <td>
-                                    : Sixteen caps? Odin only gave up one eye. Ragniko clearly made the better deal.
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="section-comments-input">
-                        <input type="text" name="new-comment" />
-                        <button class="button-send" aria-description="send comment"></button>
-                    </div>
-                </section>
-            </article>
+        <main id="content-main">
             <dialog id="pictureDialog" onclick="closeDialog()" aria-labelledby="dialogTitle"></dialog>
         </main>
 
