@@ -52,7 +52,7 @@ function getSectionPricingDetails(index) {
 
 function getPricingAndLikes(index) {
     return /*html*/ `
-        <p>${mentors[index].price} €</p>
+        <p>${mentors[index].price.toFixed(2)} €</p>
         <div>
             <p>${mentors[index].likes}</p>
             <button id="button-favorite-${index}" class="button-favorite" onclick="toggleLiked(${index})"

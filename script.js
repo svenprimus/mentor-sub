@@ -1,4 +1,5 @@
 const contentMainRef = document.getElementById('content-main');
+let userName = 'Guest';
 
 function renderProfiles(onlyLiked) {
     renderProfileCards(onlyLiked);
@@ -27,13 +28,12 @@ function renderProfileAssets(onlyLiked) {
 function renderLikedButton(index) {
     const buttonRef = document.getElementById('button-favorite-' + index);
     if (mentors[index].liked) {
-        buttonRef.classList.add("button-favorite-liked");
-        buttonRef.classList.remove("button-favorite-default");
+        buttonRef.classList.add('button-favorite-liked');
+        buttonRef.classList.remove('button-favorite-default');
     } else {
-        buttonRef.classList.add("button-favorite-default");
-        buttonRef.classList.remove("button-favorite-liked");
+        buttonRef.classList.add('button-favorite-default');
+        buttonRef.classList.remove('button-favorite-liked');
     }
-
 }
 
 function renderComments(indexMentor) {
@@ -46,21 +46,41 @@ function renderComments(indexMentor) {
 }
 
 function toggleLiked(index) {
-    const buttonClasses = document.getElementById('button-favorite-' + index).classList;
     if (mentors[index] !== undefined) {
-        if(buttonClasses.contains('button-favorite-liked')) {
-            mentors[index].liked = false;
-        } else if (buttonClasses.contains('button-favorite-default')) {
-            mentors[index].liked = true;
-        }
+        mentors[index].liked = !mentors[index].liked;
+        renderLikedButton(index);
     }
-    renderLikedButton(index);
 }
 
 function setComment(index) {
-    // TODO
+    if (mentors[index] !== undefined) {
+        const inputValue = document.getElementById('comments-input-' + index).value;
+        if (inputValue) {
+            mentors[index].comments.push({ name: userName, comment: inputValue });
+            renderComments(index);
+        }
+    }
+}
+
+function login() {
+    const inputUserName = document.getElementById('inputUserLogin').value;
+    if (inputUserName) {
+        userName = inputUserName;
+        document.getElementById('userNameText').innerHTML = userName;
+        const userLoginFieldRef = (document.getElementById('userLoginField').style.display = 'none');
+        const userLogoutFieldRef = (document.getElementById('userLogoutField').style.display = 'flex');
+    }
+}
+
+function logout() {
+    userName = 'Guest';
+    document.getElementById('inputUserLogin').value = 'Guest';
+    const userLoginFieldRef = (document.getElementById('userLoginField').style.display = 'flex');
+    const userLogoutFieldRef = (document.getElementById('userLogoutField').style.display = 'none');
 }
 
 // TODO
-// Preis zwei nachkommastellen
 // header sticky?
+// local storage
+// comment scroll jump bottom
+// style.css aufspalten

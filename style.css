@@ -31,9 +31,9 @@ footer {
 
 /* #region shell */
 .header-main {
-    height: 100px;
-
-    position: relative;
+    height: var(--height-header);;
+    width: 100%;
+    position: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -88,6 +88,7 @@ footer {
         align-items: center;
         list-style-type: none;
         justify-content: space-between;
+        flex-wrap: wrap;
         gap: 16px;
 
         button:hover > span {
@@ -157,6 +158,7 @@ main {
     flex-grow: 1;
     background-color: var(--color-bg-main);
 
+    margin-top: var(--height-header);
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
@@ -322,21 +324,6 @@ main {
         display: flex;
         gap: 16px;
 
-        input {
-            flex-grow: 1;
-            background-color: var(--color-accent-weak);
-            border: 0;
-            border-radius: 4px;
-            color: var(--color-font-default);
-            padding-left: 4px;
-            /* caret-color: red; */
-        }
-
-        input:focus {
-            outline: none;
-            border-bottom: 2px solid var(--color-accent);
-        }
-
         .button-send {
             width: var(--size-button-send);
             height: var(--size-button-send);
@@ -352,8 +339,53 @@ main {
     }
 }
 
+input {
+    flex-grow: 1;
+    background-color: var(--color-accent-weak);
+    border: 0;
+    border-radius: 4px;
+    color: var(--color-font-default);
+    padding-left: 4px;
+}
+
+input:focus {
+    outline: none;
+    border-bottom: 2px solid var(--color-accent);
+}
+
 hr {
     border: 1px solid var(--color-accent);
+}
+
+.userField {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-sections);
+
+    p {
+        color: var(--color-accent-logo);
+        font-weight: bold;
+    }
+    
+    button {
+        font-style: italic;
+    }
+
+    button:hover {
+        color: var(--color-accent-logo);
+    }
+
+    input {
+        max-width: 100px;
+    }
+
+    background-color: var(--color-bg-card);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.userLogoutField {
+    display: none;
 }
 
 /* #region profile-card */
@@ -364,6 +396,13 @@ hr {
     }
     main {
         padding-inline: max(calc(50% - (720px - 80px)), 80px);
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .header-main > nav > ul {
+        justify-content: flex-start;
+        gap: clamp(5px, calc((100svw - 270px) * 27 / 260 + 5px), 32px)
     }
 }
 
