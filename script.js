@@ -1,4 +1,5 @@
 const contentMainRef = document.getElementById('content-main');
+let userName = 'Guest';
 
 function renderProfiles(onlyLiked) {
     renderProfileCards(onlyLiked);
@@ -52,9 +53,32 @@ function toggleLiked(index) {
 }
 
 function setComment(index) {
-    // TODO
+    if (mentors[index] !== undefined) {
+        const inputValue = document.getElementById('comments-input-' + index).value;
+        if (inputValue) {
+            mentors[index].comments.push({ name: userName, comment: inputValue });
+            renderComments(index);
+        }
+    }
+}
+
+function login() {
+    const inputUserName = document.getElementById('inputUserLogin').value;
+    if (inputUserName) {
+        userName = inputUserName;
+        document.getElementById('userNameText').innerHTML = userName;
+        const userLoginFieldRef = (document.getElementById('userLoginField').style.display = 'none');
+        const userLogoutFieldRef = (document.getElementById('userLogoutField').style.display = 'flex');
+    }
+}
+
+function logout() {
+    userName = 'Guest';
+    document.getElementById('inputUserLogin').value = 'Guest';
+    const userLoginFieldRef = (document.getElementById('userLoginField').style.display = 'flex');
+    const userLogoutFieldRef = (document.getElementById('userLogoutField').style.display = 'none');
 }
 
 // TODO
-// Preis zwei nachkommastellen
 // header sticky?
+// local storage
