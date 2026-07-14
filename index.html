@@ -28,10 +28,30 @@
                 ></a>
                 <ul>
                     <li>
-                        <button onclick="renderProfiles(false)" aria-description="Show all mentors"><span>M</span>entors</button>
+                        <button onclick="renderProfiles(false)" aria-description="Show all mentors">
+                            <span>M</span>entors
+                        </button>
                     </li>
                     <li>
-                        <button onclick="renderProfiles(true)" aria-description="Show only favorite mentors"><span>F</span>avorites</button>
+                        <button onclick="renderProfiles(true)" aria-description="Show only favorite mentors">
+                            <span>F</span>avorites
+                        </button>
+                    </li>
+                    <li>
+                        <div id="userLoginField" class="userLoginField userField">
+                            <input
+                                id="inputUserLogin"
+                                type="text"
+                                name="user name"
+                                value="Guest"
+                                aria-labelledby="login-button"
+                            />
+                            <button id="login-button" onclick="login()" aria-controls="userNameText">Login</button>
+                        </div>
+                        <div id="userLogoutField" class="userLogoutField userField">
+                            <p id="userNameText" aria-labelledby="logout-button"></p>
+                            <button id="logout-button" onclick="logout()" aria-controls="userNameText">Logout</button>
+                        </div>
                     </li>
                 </ul>
             </nav>
