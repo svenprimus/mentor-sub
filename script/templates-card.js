@@ -54,7 +54,7 @@ function getPricingAndLikes(index) {
     return /*html*/ `
         <p>${mentors[index].price.toFixed(2)} €</p>
         <div>
-            <p>${mentors[index].likes}</p>
+            <p id="liked-count-${index}">${mentors[index].likes}</p>
             <button id="button-favorite-${index}" class="button-favorite" onclick="toggleLiked(${index})"
                 aria-description="add mentor to favorites">
             </button>
@@ -99,7 +99,7 @@ function getSectionComments(index) {
                 <table id="comments-table-${index}"></table>
             </div>
             <div class="section-comments-input">
-                <input id="comments-input-${index}" type="text" name="new-comment" 
+                <input id="comments-input-${index}" type="text" onkeyup="setCommentByEnter(${index})" name="new-comment" 
                 aria-labelledby="button-send-${index}"/>
                 <button id="button-send-${index}" class="button-send" onclick="setComment(${index})" 
                 aria-label="send comment" aria-description="send comment" aria-controls="comments-table-${index}">
