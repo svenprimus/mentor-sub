@@ -1,16 +1,24 @@
 :root {
     --color-bg-shell: #0e3243;
     --color-bg-main: #09212a;
-    --color-bg-card: #154B65;
-    --color-accent-logo: #17A24C;
-    --color-accent: #81BBD1;
+    --color-bg-card: #154b65;
+    --color-accent-logo: #17a24c;
+    --color-accent: #81bbd1;
     --color-accent-weak: #81bad180;
     --color-accent-strong: rgb(73, 141, 168);
     --color-font-default: whitesmoke;
-    --color-red: #FF5C51;
+    --color-red: #ff5c51;
+    --color-button-hover: #124658;
+    --color-button-click: #0d3240;
+    --color-button-arrow-default: rgb(253, 91, 79, 0.3);
+    --color-button-arrow-hover: rgb(253, 91, 79, 0.6);
 
     --size-button-favorite: 28px;
     --size-button-send: 18px;
+    --size-button-close: 32px;
+    --size-button-arrow: 60px;
+    --size-arrow: 24px;
+
     --padding-block-content: 40px;
     --gap-sections: 8px;
 
@@ -18,4 +26,9 @@
     --height-profile-card: 550px;
 
     --height-header: 100px;
+
+    --width-max-dialog-desktop: 75dvw;
+    --height-max-dialog-desktop: 75dvh;
+    --width-max-dialog-limit: 1440px;
+    --height-max-dialog-limit: 900px;
 }

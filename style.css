@@ -31,7 +31,7 @@ footer {
 
 /* #region shell */
 .header-main {
-    height: var(--height-header);;
+    height: var(--height-header);
     width: 100%;
     position: fixed;
     display: flex;
@@ -175,7 +175,7 @@ main {
         color: var(--color-accent-logo);
         font-weight: bold;
     }
-    
+
     button {
         font-style: italic;
     }
@@ -197,6 +197,28 @@ main {
     display: none;
 }
 
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px var(--color-bg-main);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-accent);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-accent-strong);
+}
+
+::selection {
+    background-color: var(--color-accent);
+}
+
 @media screen and (min-width: 1441px) {
     .header-main,
     footer {
@@ -210,7 +232,7 @@ main {
 @media screen and (max-width: 530px) {
     .header-main > nav > ul {
         justify-content: flex-start;
-        gap: clamp(5px, calc((100svw - 270px) * 27 / 260 + 5px), 32px)
+        gap: clamp(5px, calc((100svw - 270px) * 27 / 260 + 5px), 32px);
     }
 }
 

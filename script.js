@@ -130,6 +130,3 @@ function getUserFromLocalStorage() {
         login(true);
     }
 }
-
-// TODO
-// dialog

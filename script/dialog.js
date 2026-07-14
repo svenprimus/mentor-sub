@@ -1,7 +1,6 @@
 function openDialog(index) {
-    const label = getTrimmedLabel(index);
     const dialogRef = document.getElementById("pictureDialog");
-    dialogRef.innerHTML = getDialogContent(index, label);
+    dialogRef.innerHTML = getDialogContent(index, mentors[index].name);
     dialogRef.showModal();
     setDialogFocusOnTop();
     dialogRef.classList.add("opened");
@@ -26,19 +25,17 @@ function renderPreviousImage(currentImageIndex) {
 }
 
 function renderModalContent(currentImageIndex) {
-    const label = getTrimmedLabel(currentImageIndex);
     const modalHeadRef = document.getElementById("modalHead");
-    modalHeadRef.innerHTML = getModalHeadContent(label);
+    modalHeadRef.innerHTML = getModalHeadContent(mentors[currentImageIndex].name);
 
     const dialogPictureRef = document.getElementById("dialogPicture");
     dialogPictureRef.innerHTML = getModalPictureContent(currentImageIndex);
 
+    const dialogBlurbeRef = document.getElementById("dialogBlurb");
+    dialogBlurbeRef.innerHTML = getModalBlurbContent(currentImageIndex);
+
     const modalNavRef = document.getElementById("modalNav");
     modalNavRef.innerHTML = getModalNavigationContent(currentImageIndex);
-}
-
-function getTrimmedLabel(index) {
-    return mentors[index].image.replace(/\.[^/.]+$/, "").replaceAll("_", " ");
 }
 
 function setDialogFocusOnTop() {

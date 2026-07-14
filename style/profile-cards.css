@@ -1,4 +1,3 @@
-
 /* #region profile-card */
 .profile-card {
     width: var(--width-profile-card);
@@ -33,7 +32,6 @@
     transform-origin: 50% 50%;
     box-shadow: 4px 8px 4px 0px rgba(0, 0, 0, 0.205);
 
-    /* TODO open dialog (same as with blurb) */
     cursor: pointer;
 }
 
@@ -99,7 +97,6 @@
 
 .section-blurb {
     p {
-        /* TODO: open dialog? */
         cursor: pointer;
         width: 100%;
         overflow: hidden;
@@ -133,24 +130,6 @@
                 }
             }
         }
-    }
-
-    .section-comments-table::-webkit-scrollbar {
-        width: 5px;
-    }
-
-    .section-comments-table::-webkit-scrollbar-track {
-        box-shadow: inset 0 0 5px var(--color-bg-main);
-        border-radius: 10px;
-    }
-
-    .section-comments-table::-webkit-scrollbar-thumb {
-        background: var(--color-accent);
-        border-radius: 10px;
-    }
-
-    .section-comments-table::-webkit-scrollbar-thumb:hover {
-        background: var(--color-accent-strong);
     }
 
     .section-comments-input {
