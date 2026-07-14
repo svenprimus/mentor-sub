@@ -31,9 +31,9 @@ footer {
 
 /* #region shell */
 .header-main {
-    height: 100px;
-
-    position: relative;
+    height: var(--height-header);;
+    width: 100%;
+    position: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -158,6 +158,7 @@ main {
     flex-grow: 1;
     background-color: var(--color-bg-main);
 
+    margin-top: var(--height-header);
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
@@ -363,6 +364,7 @@ hr {
 
     p {
         color: var(--color-accent-logo);
+        font-weight: bold;
     }
     
     button {

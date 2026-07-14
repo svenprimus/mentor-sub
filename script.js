@@ -82,3 +82,5 @@ function logout() {
 // TODO
 // header sticky?
 // local storage
+// comment scroll jump bottom
+// style.css aufspalten
