@@ -338,8 +338,8 @@ main {
         }
 
         .button-send {
-            width: 18px;
-            height: 18px;
+            width: var(--size-button-send);
+            height: var(--size-button-send);
             background-image: url('./asset/icon/icon-send-default.svg');
             background-size: contain;
             background-repeat: no-repeat;

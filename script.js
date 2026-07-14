@@ -45,10 +45,22 @@ function renderComments(indexMentor) {
     }
 }
 
-function setLiked(index) {
-    // TODO
+function toggleLiked(index) {
+    const buttonClasses = document.getElementById('button-favorite-' + index).classList;
+    if (mentors[index] !== undefined) {
+        if(buttonClasses.contains('button-favorite-liked')) {
+            mentors[index].liked = false;
+        } else if (buttonClasses.contains('button-favorite-default')) {
+            mentors[index].liked = true;
+        }
+    }
+    renderLikedButton(index);
 }
 
 function setComment(index) {
     // TODO
 }
+
+// TODO
+// Preis zwei nachkommastellen
+// header sticky?
