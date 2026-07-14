@@ -43,6 +43,8 @@ function renderComments(indexMentor) {
     for (let indexComment = 0; indexComment < mentors[indexMentor].comments.length; indexComment++) {
         commentTableRef.innerHTML += getCommentRow(indexMentor, indexComment);
     }
+    const commentSectionRef = document.getElementById('section-comments-table-' + indexMentor);
+    commentSectionRef.scrollTop = commentSectionRef.scrollHeight;
 }
 
 function toggleLiked(index) {
@@ -54,9 +56,10 @@ function toggleLiked(index) {
 
 function setComment(index) {
     if (mentors[index] !== undefined) {
-        const inputValue = document.getElementById('comments-input-' + index).value;
-        if (inputValue) {
-            mentors[index].comments.push({ name: userName, comment: inputValue });
+        const inputValueRef = document.getElementById('comments-input-' + index);
+        if (inputValueRef.value) {
+            mentors[index].comments.push({ name: userName, comment: inputValueRef.value });
+            inputValueRef.value = "";
             renderComments(index);
         }
     }
@@ -80,7 +83,5 @@ function logout() {
 }
 
 // TODO
-// header sticky?
 // local storage
-// comment scroll jump bottom
 // style.css aufspalten

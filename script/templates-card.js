@@ -95,7 +95,7 @@ function getSectionComments(index) {
     return /*html*/ `
         <section class="section-comments profile-card-content">
             <h3>Comments</h3>
-            <div class="section-comments-table">
+            <div id="section-comments-table-${index}" class="section-comments-table">
                 <table id="comments-table-${index}"></table>
             </div>
             <div class="section-comments-input">
