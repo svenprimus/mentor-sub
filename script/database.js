@@ -91,7 +91,7 @@ let mentors = [
     },
     {
         name: 'Bananavin Kong',
-        saga: 'The Rise of the Head of Banana',
+        saga: 'The Head of Banana',
         blurb: 'Long before the age of endless repositories and legendary deployments, there walked a titan whose ambitions dwarfed mountains.<br>His name was Bananavin Kong.<br>Many believed he sought to rival Godzilla himself. But the King of Monsters was never enough. Why conquer cities when an entire digital empire awaited? With a mighty roar, he turned away from the battlefield and marched toward the greatest challenge of them all:<br>Full Stack Development.<br>The front end bent to his vision. The back end yielded to his command. Databases aligned like loyal legions, and APIs opened their gates before him. Wherever others saw bugs, Bananavin saw opportunities to evolve.<br>Yet among all his titles—Architect, Developer, Conqueror—one stands above the rest.<br><strong>Head of Banana.</strong><br>None truly know how he earned the sacred rank. Some claim it was bestowed after consuming the mythical Golden Banana. Others whisper he once optimized an application so perfectly that bananas across the world ripened in unison.<br>The truth, as always, remains hidden beneath layers of legend.<br>Today, Bananavin Kong rules not with claws or fire, but with clean code, unstoppable determination, and an endless supply of potassium. His followers gather from every corner of the digital realm, seeking guidance from the one who proved that even monsters can become masters of Full Stack.<br>Raise your keyboards.<br>For this is not merely the tale of a developer.<br>It is the legend of Bananavin Kong, the one and only Head of Banana.',
         likes: 750,
         liked: false,

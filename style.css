@@ -159,8 +159,8 @@ main {
 
     display: flex;
     flex-wrap: wrap;
-    /* align-items: flex-start; */
     align-content: flex-start;
+    justify-content: center;
     gap: 20px;
 }
 
@@ -203,7 +203,6 @@ main {
 }
 
 .button-favorite {
-    background-image: url('./asset/icon/icon-favorite-default.svg');
     width: var(--size-button-favorite);
     height: var(--size-button-favorite);
     background-size: contain;
@@ -211,8 +210,20 @@ main {
     background-position: 50%;
 }
 
-.button-favorite:hover {
+.button-favorite-default {
+    background-image: url('./asset/icon/icon-favorite-default.svg');
+}
+
+.button-favorite-liked {
     background-image: url('./asset/icon/icon-favorite-active.svg');
+}
+
+.button-favorite-default:hover {
+    background-image: url('./asset/icon/icon-favorite-active.svg');
+}
+
+.button-favorite-liked:hover {
+    background-image: url('./asset/icon/icon-favorite-default.svg');
 }
 
 .section-pricing {
@@ -327,8 +338,8 @@ main {
         }
 
         .button-send {
-            width: 18px;
-            height: 18px;
+            width: var(--size-button-send);
+            height: var(--size-button-send);
             background-image: url('./asset/icon/icon-send-default.svg');
             background-size: contain;
             background-repeat: no-repeat;

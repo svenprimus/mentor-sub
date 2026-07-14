@@ -3,6 +3,7 @@ const contentMainRef = document.getElementById('content-main');
 function renderProfiles(onlyLiked) {
     renderProfileCards(onlyLiked);
     renderProfileAssets(onlyLiked);
+    contentMainRef.innerHTML += addDialog();
 }
 
 function renderProfileCards(onlyLiked) {
@@ -26,8 +27,13 @@ function renderProfileAssets(onlyLiked) {
 function renderLikedButton(index) {
     const buttonRef = document.getElementById('button-favorite-' + index);
     if (mentors[index].liked) {
-        buttonRef.style.backgroundImage = 'url("./asset/icon/icon-favorite-active.svg")';
+        buttonRef.classList.add("button-favorite-liked");
+        buttonRef.classList.remove("button-favorite-default");
+    } else {
+        buttonRef.classList.add("button-favorite-default");
+        buttonRef.classList.remove("button-favorite-liked");
     }
+
 }
 
 function renderComments(indexMentor) {
@@ -38,3 +44,23 @@ function renderComments(indexMentor) {
         commentTableRef.innerHTML += getCommentRow(indexMentor, indexComment);
     }
 }
+
+function toggleLiked(index) {
+    const buttonClasses = document.getElementById('button-favorite-' + index).classList;
+    if (mentors[index] !== undefined) {
+        if(buttonClasses.contains('button-favorite-liked')) {
+            mentors[index].liked = false;
+        } else if (buttonClasses.contains('button-favorite-default')) {
+            mentors[index].liked = true;
+        }
+    }
+    renderLikedButton(index);
+}
+
+function setComment(index) {
+    // TODO
+}
+
+// TODO
+// Preis zwei nachkommastellen
+// header sticky?
