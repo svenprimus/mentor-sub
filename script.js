@@ -27,8 +27,13 @@ function renderProfileAssets(onlyLiked) {
 function renderLikedButton(index) {
     const buttonRef = document.getElementById('button-favorite-' + index);
     if (mentors[index].liked) {
-        buttonRef.style.backgroundImage = 'url("./asset/icon/icon-favorite-active.svg")';
+        buttonRef.classList.add("button-favorite-liked");
+        buttonRef.classList.remove("button-favorite-default");
+    } else {
+        buttonRef.classList.add("button-favorite-default");
+        buttonRef.classList.remove("button-favorite-liked");
     }
+
 }
 
 function renderComments(indexMentor) {
