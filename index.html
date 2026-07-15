@@ -9,6 +9,8 @@
         <link rel="stylesheet" href="./style/variables.css" />
         <link rel="stylesheet" href="./style/fonts.css" />
         <link rel="stylesheet" href="./style/standard.css" />
+        <link rel="stylesheet" href="./style/profile-cards.css" />
+        <link rel="stylesheet" href="./style/dialog.css" />
         <link rel="stylesheet" href="./style.css" />
 
         <script src="./script/database.js"></script>
@@ -17,23 +19,23 @@
         <script src="./script/dialog.js"></script>
         <script src="./script.js" defer></script>
     </head>
-    <body onload="renderProfiles(false)">
+    <body onload="initPage(false)" id="page-top">
         <header class="header-main">
             <nav>
                 <a href="#page-top" aria-label="go to top of page">
-                    <div id="page-top">
+                    <div>
                         <img src="./asset/icon/favicon.svg" alt="mentors-sub logo" />
                         <p><span>M</span>entor Sub</p>
                         <img class="infiction" src="./asset/icon/icon-in-fiction.svg" alt="stamp to logo " /></div
                 ></a>
                 <ul>
                     <li>
-                        <button onclick="renderProfiles(false)" aria-description="Show all mentors">
+                        <button onclick="initPage(false)" aria-description="Show all mentors">
                             <span>M</span>entors
                         </button>
                     </li>
                     <li>
-                        <button onclick="renderProfiles(true)" aria-description="Show only favorite mentors">
+                        <button onclick="initPage(true)" aria-description="Show only favorite mentors">
                             <span>F</span>avorites
                         </button>
                     </li>
@@ -46,7 +48,7 @@
                                 value="Guest"
                                 aria-labelledby="login-button"
                             />
-                            <button id="login-button" onclick="login()" aria-controls="userNameText">Login</button>
+                            <button id="login-button" onclick="login(false)" aria-controls="userNameText">Login</button>
                         </div>
                         <div id="userLogoutField" class="userLogoutField userField">
                             <p id="userNameText" aria-labelledby="logout-button"></p>

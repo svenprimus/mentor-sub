@@ -9,6 +9,7 @@ function getDialogContent(index, label) {
             onclick="stopDialogPropagation(event)">
             ${getModalHeadWrapper(label)}
             ${getModalPictureWrapper(index)}
+            ${getModalBlurbWrapper(index)}
             ${getModalNavigationWrapper(index)}
         </section>
     `;
@@ -26,9 +27,23 @@ function getModalHeadContent(label) {
     return /*html*/ `
         <button id="dialogClose" class="close-button" 
             aria-controls="pictureDialog" aria-label="close dialog" 
-            onclick="closeDialog()">
+            onkeydown="closeDialogbyEnter()" onclick="closeDialog()">
         </button>
         <h2 id="dialogTitle">${label}</h2>
+    `;
+}
+
+function getModalBlurbWrapper(index) {
+    return /*html*/ `
+        <section id="dialogBlurb" class="dialog-blurb-wrapper">
+            ${getModalBlurbContent(index)}
+        </section>
+    `;
+}
+
+function getModalBlurbContent(index) {
+    return /*html*/ `
+        <p class="dialog-blurb">${mentors[index].blurb}</p>
     `;
 }
 
