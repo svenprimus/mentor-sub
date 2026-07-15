@@ -85,7 +85,8 @@ function getDetailsTable(index) {
 function getSectionBlurb(index) {
     return /*html*/ `
         <section class="section-blurb profile-card-content">
-            <p aria-haspopup="dialog" aria-controls="pictureDialog" onclick="openDialog(${index})" tabindex="0">
+            <p aria-haspopup="dialog" aria-controls="pictureDialog" 
+                onkeyup="openDialogByEnter(${index})" onclick="openDialog(${index})" tabindex="0">
                 ${mentors[index].blurb}
             </p>
         </section>
