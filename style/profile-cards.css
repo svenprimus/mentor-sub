@@ -51,14 +51,6 @@
     background-image: url('../asset/icon/icon-favorite-active.svg');
 }
 
-.button-favorite-default:hover {
-    background-image: url('../asset/icon/icon-favorite-active.svg');
-}
-
-.button-favorite-liked:hover {
-    background-image: url('../asset/icon/icon-favorite-default.svg');
-}
-
 .section-pricing {
     display: flex;
     align-items: center;
