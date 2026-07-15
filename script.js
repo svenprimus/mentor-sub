@@ -65,9 +65,9 @@ function toggleLiked(index) {
 function renderLikedCount(index) {
     if (mentors[index] !== undefined && mentors[index].likes > 0) {
         mentors[index].likes += mentors[index].liked ? 1 : -1;
-        document.getElementById('liked-count-' + index).innerHTML = /*html*/`
+        document.getElementById('liked-count-' + index).innerHTML = /*html*/ `
             ${mentors[index].likes}
-        `
+        `;
     }
 }
 
@@ -98,6 +98,12 @@ function login(fromLocalStorage) {
     const userLoginFieldRef = (document.getElementById('userLoginField').style.display = 'none');
     const userLogoutFieldRef = (document.getElementById('userLogoutField').style.display = 'flex');
     saveUserToLocalStorage();
+}
+
+function loginByEnter(fromLocalStorage) {
+    if (event.key === 'Enter') {
+        login(fromLocalStorage);
+    }
 }
 
 function logout() {
