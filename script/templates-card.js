@@ -21,6 +21,7 @@ function getProfileContent(index) {
         ${getSectionComments(index)}
     `;
 }
+
 function getSectionPicture(index) {
     return /*html*/ `
         <div class="profile-card-content">

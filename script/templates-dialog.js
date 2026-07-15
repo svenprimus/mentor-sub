@@ -3,6 +3,7 @@ function addDialog() {
         <dialog id="pictureDialog" onclick="closeDialog()" aria-labelledby="dialogTitle"></dialog>
     `;
 }
+
 function getDialogContent(index, label) {
     return /*html*/ `
         <section aria-description="dialog window for bigger view of image" class="dialog-content-wrapper" 

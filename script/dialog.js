@@ -70,7 +70,6 @@ function setDialogFocusOnPrevious() {
     dialogPreviousRef.focus();
 }
 
-// make dialog clickable without closing it
 function stopDialogPropagation(event) {
     event.stopPropagation();
 }
