@@ -27,7 +27,7 @@ function getModalHeadContent(label) {
     return /*html*/ `
         <button id="dialogClose" class="close-button" 
             aria-controls="pictureDialog" aria-label="close dialog" 
-            onclick="closeDialog()">
+            onkeydown="closeDialogbyEnter()" onclick="closeDialog()">
         </button>
         <h2 id="dialogTitle">${label}</h2>
     `;

@@ -28,6 +28,7 @@ function getSectionPicture(index) {
                 aria-haspopup="dialog"
                 aria-controls="pictureDialog"
                 onclick="openDialog(${index})"
+                onkeyup="openDialogByEnter(${index})"
                 class="profile-picture"
                 src="${mentors[index].image}"
                 alt="${mentors[index].alt}"

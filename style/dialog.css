@@ -30,11 +30,11 @@
 
         .close-button:hover,
         .close-button:focus {
-            background-color: var(--color-button-hover);
+            background-color: var(--color-accent);
         }
 
         .close-button:active {
-            background-color: var(--color-button-click);
+            background-color: var(--color-button-close-click);
         }
 
         h2:hover {
